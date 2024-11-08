@@ -5,18 +5,14 @@ local lspconfig = require "lspconfig"
 local nvlsp = require "nvchad.configs.lspconfig"
 
 local servers = {
-  "rust-analyzer",
+  "rust_analyzer",
   "pyright",
-  "protolint",
-  "json-to-struct",
   "gopls",
-  "golangci-lint-langserver",
-  "ast-grep",
-  "ansible-language-server",
-  "eslint-lsp",
-  "lua-language-server",
+  "ansiblels",
+  "eslint",
+  "lua_ls",
   "marksman",
-  "yaml-language-server",
+  "yamlls",
   "cssls",
   "html",
 }

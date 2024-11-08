@@ -1,25 +1,21 @@
 return {
   {
-    lazy = false,
     "stevearc/conform.nvim",
-    event = "BufWritePre", -- format on save
+    lazy = false,
+    event = "BufWritePre",
     opts = require "configs.conform",
   },
+
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
   },
-  {
-    require "configs.treesitter",
-  },
-  {
-    require "configs.avante",
-  },
-  {
-    require "configs.copilot",
-  },
+  require "configs.lazygit",
+  require "configs.treesitter",
+  require "configs.avante",
+  require "configs.copilot",
   {
     "zbirenbaum/copilot-cmp",
     dependencies = {
@@ -36,4 +32,5 @@ return {
       return require("configs.cmp").setup()
     end,
   },
+  { "akinsho/toggleterm.nvim", version = "*", config = true },
 }
